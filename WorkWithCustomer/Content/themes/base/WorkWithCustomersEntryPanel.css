@@ -1,0 +1,82 @@
+/*
+ * File Name: WorkWithCustomersEntryPanel.css
+ * Creation Date: 2012-08-08.08:53:02
+ * This file is responsible for flat screen display for function: WorkWithCustomersEntryPanel
+ */
+
+/*
+ * Type: Constant  ::  Name: Databorough Ltd
+ */
+.WorkWithCustomersEntryPanel_Databorough_Ltd
+{
+	position: absolute;
+	top: 60px;
+	left: 0px;
+}
+
+/*
+ * Field:  - zzpgm;
+ */
+.WorkWithCustomersEntryPanel_zzpgm
+{
+	position: absolute;
+	top: 60px;
+	left: 200px;
+	width: 140px;
+	text-align: left;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Field:  - zzdate;
+ */
+.WorkWithCustomersEntryPanel_zzdate
+{
+	position: absolute;
+	top: 90px;
+	left: 200px;
+	width: 80px;
+	text-align: right;
+	padding: 2px 2px 0;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Type: Constant  ::  Name: Customer
+ */
+.WorkWithCustomersEntryPanel_Customer
+{
+	position: absolute;
+	top: 120px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwbccd;
+ */
+.WorkWithCustomersEntryPanel_xwbccd
+{
+	position: relative;
+	top: 55px;
+	left: 26px;
+	width: 108px;
+	text-align: left;
+}
+/*
+ * Style for fieldset
+ */
+.WorkWithCustomersEntryPanel_GroupHeader
+{
+	height: 0px;
+}
+/*
+ * Style for Flat Button Panel
+ */
+#buttonPanel
+{
+	font-weight:bold;
+	width: auto;
+	margin-left: 100px;
+	*margin-left: 50px;
+	margin-left: 50px/9;
+}

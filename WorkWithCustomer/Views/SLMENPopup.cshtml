@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WorkWithCustomer.Models.Salespersons>
+@{
+    Layout = null;
+}
+
+<div style="margin: 0px auto;">
+    <div style="margin: 0px auto; width: 290px; border: 2px solid #D5EBF7; background: #D5EBF7;
+        border-radius: 0px 10px 10px 10px;">
+        <div id="WorkWithCustomersBean" class="clientAreaGrid" style="margin: 0px">
+            <div id="gridContainer" class="XWDFTgridContainer">
+                <table id="updtGrid:grid" class="XWDFTgrid" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            &nbsp;
+                        </th>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            @Html.DisplayNameFor(model => model.person)
+                        </th>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            @Html.DisplayNameFor(model => model.full_name)
+                        </th>
+                    </tr>
+                    <tr class="XWDFTgridAltData" style="height: 30px;">
+                        <td>
+                            <img src="../Content/themes/base/images/filter.gif" id="filterGif" class="filter"
+                                onclick="$(&quot;#SLMENForm&quot;).submit();" />
+                        </td>
+                        <td>
+                            @using (Ajax.BeginForm("SlmenPopup", "SalesPerson",new {firstrow = Model.First().person, hasPrevious = ViewBag.HasPrevious}, new AjaxOptions { InsertionMode = InsertionMode.Replace, OnBegin = "gifLoad()", OnComplete = "gifUnload()", UpdateTargetId = "popupdata" }, new { id = "SLMENForm", name = "SLMENForm" }))
+                            {
+                                <input id="filterInput" class="WorkWithCustomersEntryPanel_xwbncd" type="text" title="xwbccd"
+                                    style="text-transform: uppercase; width: 30px;" tabindex="1" maxlength="11" value=""
+                                    name="Key" style="" />
+                            }
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    @{
+                        var GridRow = 1;
+                        foreach (var item in Model)
+                        {
+                            var partialid = "updtGridgridrep" + item.person.TrimEnd();
+                            var partialid2 = "updtGridgridfull_name" + item.person.TrimEnd();
+                            var className = (GridRow % 2) == 0 ? "XWDFTgridAltData" : "XWDFTgridData";
+                            <tr class="@className">
+                            <td class="XWDFTrightBottomBorder" width="16" align="center">
+                                @Html.CheckBox(item.person.TrimEnd(), new { id = "updtGrid:grid:2:checked", @class = "chkBox", tabindex = "1", onclick = "ChkBoxChecked(this)" })
+                            </td>
+                            <td>
+                                <input id = "@partialid" class = "WorkWithCustomersGrid_person XWDFTgridField ReadOnly" type = "text" readonly = "readonly" maxlength = "2" name = "updtGrid:grid:0:person" tabindex = "2" value="@item.person.ToString()" style="width: 30px;"/>
+                            </td>
+                            <td>
+                                <input id ="@partialid2" class = "WorkWithCustomersGrid_pname XWDFTgridField ReadOnly" type = "text" readonly = "readonly" maxlength = "40" name = "updtGrid:grid:0:pname" tabindex = "3"  value="@item.full_name.ToString()"style="width: 100px;" />
+                            </td>
+                        </tr>
+                            GridRow++;
+                        }
+                    }
+                </table>
+                <input type="button" id="REPCancel" value="Cancel" class="buttons" onclick="POPUPCancel();" />
+                <input type="button" id="REPSelect" value="Select" class="buttons" onclick="POPUPSelect(this , &quot;full_name&quot; );" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="currentPosition" style="display: none;">@ViewBag.CurrentPage.ToString().TrimEnd()</div>
+<div id="position2" style="display: none;">@ViewBag.position2.ToString().TrimEnd()</div>
+<div id="popupPage" style="display: none;">@ViewBag.popupPage.ToString().TrimEnd()</div>
+<div id="popuppager" style="position: absolute; bottom: 2%; right: 2%; padding-left: 0px;
+    padding-right: 0px;">
+    @{ if (ViewBag.HasPrevious)
+       {
+        <img class="popuppagerGif" id="previousGif" onclick="previousGifclick() " src="../Content/themes/base/images/previous.gif" />
+       }
+    }
+    @{ if (ViewBag.HasMore)
+       {
+        <img class="popuppagerGif" id="nextGif" onclick="nextGifclick() " src="../Content/themes/base/images/next.gif" style="margin-left: -4px" />
+       }
+    }
+</div>

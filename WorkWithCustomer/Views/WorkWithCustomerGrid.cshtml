@@ -1,0 +1,121 @@
+﻿@model IEnumerable<WorkWithCustomer.Models.Purchases>
+@using WorkWithCustomer.Controllers
+@{
+    ViewBag.Title = "Index";
+    if (TempData["postBackError"] != null)
+    {
+    <script type="text/javascript">
+        gifUnload();
+            alert("@TempData["postBackError"].ToString()");
+    </script>
+    }
+}
+<link href="../Content/themes/base/WorkWithCustomersGrid.css" rel="stylesheet" type="text/css" />
+<link href="../Content/themes/base/WorkWithCustomersEntryPanel.css" rel="stylesheet" type="text/css" />
+<div id="WorkWithCustomersEntryPanel" class="clientArea">
+    @using (Ajax.BeginForm("WorkWithCustomerGrid", new { rowstart=Model.First().customer }, new AjaxOptions { OnBegin = "gifLoad()", OnComplete = "gifUnload()", UpdateTargetId = "PageContent" }, new { id = "updt" }))
+    {   
+        <h1 class="groupHeader">
+            <label class="groupHeaderText">
+                Work with Customers</label></h1>
+        <div>@ViewBag.Text</div>
+        
+        <div style="color: #0000FF; font-weight: bold; padding-left: 10px;">@TempData["Result"]</div>
+        <div class="flatContainer">
+            <fieldset class="WorkWithCustomersEntryPanel_GroupHeader">
+                <input id="updt:xwbccd" class="WorkWithCustomersEntryPanel_xwbccd" type="text" title="xwbccd"
+                    style="text-transform: uppercase" tabindex="1" maxlength="11" value="" name="txt1" />
+            </fieldset>
+        </div>
+    }
+    <div id="WorkWithCustomersBean" class="clientAreaGrid">
+        <div class="pageLinksContainer">
+            <div class="pageLinks">
+                @{ if (ViewBag.HasMore)
+                   {
+                    @Ajax.RawActionLink(string.Format("<div id=\"nextPage\"></div>"), "WorkWithCustomerGrid", new { page = (ViewBag.CurrentPage + 10), FilteredIndex = ViewBag.FilteredIndex },
+                       new AjaxOptions { InsertionMode = InsertionMode.Replace, OnBegin = "gifLoad()", OnComplete = "gifUnload()", UpdateTargetId = "PageContent" })@*    *@               
+                   }
+                }
+                @{ if (ViewBag.HasPrevious)
+                   {
+                    @Ajax.RawActionLink(string.Format("<div id=\"previousPage\"></div>"), "WorkWithCustomerGrid", new { page = (ViewBag.CurrentPage - 10), FilteredIndex = ViewBag.FilteredIndex },
+                        new AjaxOptions { InsertionMode = InsertionMode.Replace, OnBegin = "gifLoad()", OnComplete = "gifUnload()", UpdateTargetId = "PageContent" })
+                   }
+                }
+            </div>
+        </div>
+        @using (Ajax.BeginForm("WorkWithCustomerEntryPanel", "WorkWithCustomer", new AjaxOptions { OnSuccess = "SetOperationType();addDatePicker();", OnBegin = "gifLoad()", OnComplete = "gifUnload()", InsertionMode = InsertionMode.Replace, UpdateTargetId = "PageContent" }))
+        {
+            
+            
+            <div id="gridContainer" class="XWDFTgridContainer">
+                <table id="updtGrid:grid" class="XWDFTgrid" cellspacing="0" cellpadding="0" border="0">
+                    <thead>
+                        <tr>
+                            <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            </th>
+                            <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                                <span title="">@Html.DisplayNameFor(model => model.customer)</span>
+                            </th>
+                            <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                                <span title="">@Html.DisplayNameFor(model => model.name)</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="XWDFTgridAltData" style="height: 30px;">
+                            <td>
+                                <img src="../Content/themes/base/images/filter.gif" id="filterGif" class="filter" onclick="$( &quot;form:first&quot; ).submit();"/>
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        @{
+    
+            var gridRow = 1;
+            foreach (var item in Model)
+            {
+                var className = (gridRow % 2) == 0 ? "XWDFTgridAltData" : "XWDFTgridData";
+                <tr class="@className">
+                                <td class="XWDFTrightBottomBorder" align="center" width="16">
+                                    @Html.CheckBox(item.customer.TrimEnd(), new { id = "updtGrid:grid:2:checked", @class = "chkBox" })
+                                </td>
+                                <td>
+                                    @*Html.DisplayFor(itm => item.XWBCCD)*@
+                                    <input id="updtGrid:grid:0:xwbccd" class="WorkWithCustomersGrid_xwbccd XWDFTgridField ReadOnly" type="text" readonly="readonly" maxlength="11" value="@item.customer" name="updtGrid:grid:0:xwbccd" tabindex="2">
+                                </td>
+                                <td>
+                                    @*Html.DisplayFor(itm => item.XWG4TX)*@
+                                    <input id="updtGrid:grid:0:xwg4tx" class="WorkWithCustomersGrid_xwg4tx XWDFTgridField ReadOnly" type="text" readonly="readonly" maxlength="40" value="@item.name" name="updtGrid:grid:0:xwg4tx" tabindex="3">
+                                </td>
+                            </tr>
+                gridRow++;
+            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <input class="buttons" type="submit" value="Add" name="Add" /><input type="hidden"
+                    name="Add" value="AddCustomer" />
+                <input class="buttons" type="submit" value="Change" name="Change" /><input type="hidden"
+                    name="Change" value="ChangeCustomer" />
+                <input class="buttons" type="submit" value="Delete" name="Delete" /><input type="hidden"
+                    name="Delete" value="DeleteCustomer" />
+                <input class="buttons" type="submit" value="Display" name="Display" /></div>
+            <input type="hidden" name="Display" value="DisplayCustomer" />
+            <br />
+        }
+    </div>
+</div>
+<div style="display: none" id="userName">@ViewBag.userName</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        appendHeaderInfo("Work With Customers");
+    });
+</script>

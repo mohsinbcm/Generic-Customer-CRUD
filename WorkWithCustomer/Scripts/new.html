@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Hello</title>
+    <script type="text/javascript" src="jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        function CusGrpSelect(obj, value) {
+            var temp = $(obj).attr("Id").substring(0, $(obj).attr("Id").indexOf("Select"));
+            alert(temp);
+//            alert(temp.toUpperCase());
+//            alert(temp.toLowerCase());
+//            alert(value);
+//            if (false || true) {
+//                alert("true");
+//            }
+            $(obj).parent().children("form").submit();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="CusGrpSelect" value="Select" class="buttons" onclick="CusGrpSelect(this,&quot;description&quot;);" />
+    <form id="form1" id="login" name="login" method="post" action="www.google.com" target="_blank">
+        <input type="text" value="erer" onchange="alert(this.value=this.value.toUpperCase());alert(&quot;Testing Over&quot;);" />
+    </form>
+</body>
+</html>

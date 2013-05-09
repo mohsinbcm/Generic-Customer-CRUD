@@ -1,0 +1,44 @@
+/*
+ * File Name: WorkWithCustomersGrid.css
+ * Creation Date: 2012-08-08.08:53:02
+ * This file is responsible for flat screen display for function: WorkWithCustomersGrid
+ */
+/*
+ * Style for fieldset
+ */
+.WorkWithCustomersGrid_GroupHeader
+{
+	height: 35px;
+}
+/*
+ * Style for Flat Button Panel
+ */
+#buttonPanel
+{
+	position: absolute;
+	top: 30px;
+	font-weight:bold;
+	width: auto;
+	margin-left: 100px;
+	*margin-left: 50px;
+	margin-left: 50px/9;
+}
+/*
+ * Field:  - xwbccd;
+ */
+.WorkWithCustomersGrid_xwbccd
+{
+	width: 99px;
+	text-align: left;
+	padding: 0 3px 3px 0;
+	text-transform: uppercase;
+}
+/*
+ * Field:  - xwg4tx;
+ */
+.WorkWithCustomersGrid_xwg4tx
+{
+	width: 360px;
+	text-align: left;
+padding: 0 3px 3px 0;
+}

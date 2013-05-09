@@ -1,0 +1,138 @@
+﻿@inherits WorkWithCustomer.Views.WorkWithCustomerEntryPanel
+@{if(TempData["errorElement"]!=null){
+      <script type="text/javascript">
+          $(document).ready(function () {
+              WorkWithCustomerEntryPanel();
+              var temp = $("#errorElement").text().trim();
+              var arr = temp.split(" ");
+              $.each(arr, function (index, value) {
+                  var temp2 = ".CustomerDetailMaintenanceEntryPanel_" + value.toLowerCase() + "_txt";
+                  $(temp2).addClass("input-validation-error");
+              });
+              $(".input-validation-error:first").focus();
+          });
+      </script>
+    }
+}
+@{if(TempData["redir"].ToString() == "Edit"){
+       <script type="text/javascript">
+           $(document).ready(function () {
+               $(".CustomerDetailMaintenanceEntryPanel_customer_txt").attr('readonly', 'readonly');
+               $(".CustomerDetailMaintenanceEntryPanel_customer_txt").addClass(' readonlyinp');
+           });
+      </script>
+  }
+}
+<script src="../Scripts/Utils.js" type="text/javascript"></script>
+<link href="../Content/themes/base/jquery-ui-1.8.23.custom.css" rel="stylesheet"
+    type="text/css" />
+<link href="../Content/themes/base/CustomerDetailMaintenanceEntryPanel.css" rel="stylesheet"
+    type="text/css" />
+<div id="SelectedOption">@TempData["redir"].ToString()</div>
+<div id="CustomerDetailMaintenanceEntryPanel" class="clientArea">
+
+    @using (Ajax.BeginForm("Save", "WorkWithCustomer", new AjaxOptions { InsertionMode = InsertionMode.Replace, OnBegin = "gifLoad()", OnComplete = "gifUnload()", UpdateTargetId = "PageContent" }, new { id = "WorkWithCustomerEntyPanel", name = "WorkWithCustomerEntyPanel" }))
+    {
+        <h1 class="groupHeader">
+            <label class="groupHeaderText">
+                Work with Customers</label>
+        </h1>
+        <div id="messagePanel" @*style="display: none;"*@>
+            <div class="clientMessages">
+            <div id="errorElement" style="display:none;">
+            @TempData["errorElement"]
+            
+            </div>
+            </div>
+            <div id="updt:errMsg">@MvcHtmlString.Create(Html.Encode(TempData["message"])
+    .Replace(Environment.NewLine, "<br />"))</div>
+        </div>    
+	
+        <div class="flatContainer">
+            <fieldset class="CustomerDetailMaintenanceEntryPanel_GroupHeader">
+            @onPreRenderer()
+                <legend></legend>
+                <div style="color: #0000FF; font-weight: bold; padding-left: 10px;">@TempData["Result"]</div>
+                @Html.LabelFor(purchases => purchases.customer, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Customer_No", @class = "CustomerDetailMaintenanceEntryPanel_customer" })
+                @Html.TextBox("updt:customer", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.customer, new { id = "updt:customer", @class = "CustomerDetailMaintenanceEntryPanel_customer_txt", title = "XWBCCD", tabindex = "1", maxlength = "11", name = "updt:customer" })
+                @Html.LabelFor(purchases => purchases.name, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Customer_Name", @class = "CustomerDetailMaintenanceEntryPanel_name" })
+                @Html.TextBox("updt:name", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.name, new { id = "updt:name", @class = "CustomerDetailMaintenanceEntryPanel_name_txt", title = "XWG4TX", tabindex = "2", maxlength = "40", name = "updt:name" })
+                @Html.LabelFor(purchases => purchases.statement_account, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Statement_Account", @class = "CustomerDetailMaintenanceEntryPanel_statement_account" })
+                @Html.TextBox("updt:statement_account", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.statement_account, new { id = "updt:statement_account", @class = "CustomerDetailMaintenanceEntryPanel_statement_account_txt", title = "XWB2CD", tabindex = "3", maxlength = "11", name = "updt:statement_account" })
+                @Html.LabelFor(purchases => purchases.related_account, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Related_Account", @class = "CustomerDetailMaintenanceEntryPanel_related_account" })
+                @Html.TextBox("updt:related_account", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.related_account, new { id = "updt:related_account", @class = "CustomerDetailMaintenanceEntryPanel_related_account_txt", title = "XWB3CD", tabindex = "4", maxlength = "11", name = "updt:related_account" })
+                @Html.LabelFor(purchases => purchases.tax_reg, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Tax_Reg", @class = "CustomerDetailMaintenanceEntryPanel_tax_reg" })
+                @Html.TextBox("updt:tax_reg", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.tax_reg, new { id = "updt:tax_reg", @class = "CustomerDetailMaintenanceEntryPanel_tax_reg_txt", title = "XWHITX", tabindex = "5", maxlength = "15", name = "updt:tax_reg" })
+                @Html.LabelFor(purchases => purchases.bank, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Bank", @class = "CustomerDetailMaintenanceEntryPanel_bank" })
+                @Html.TextBox("updt:bank", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.bank, new { id = "updt:bank", @class = "CustomerDetailMaintenanceEntryPanel_bank_txt", title = "XWE0NB", tabindex = "6", maxlength = "9", name = "updt:bank" })
+                @Html.LabelFor(purchases => purchases.bank_a_c, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Bank_Account", @class = "CustomerDetailMaintenanceEntryPanel_bank_a_c" })
+                @Html.TextBox("updt:bank_a_c", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.bank_a_c, new { id = "updt:bank_a_c", @class = "CustomerDetailMaintenanceEntryPanel_bank_a_c_txt", title = "XWJUN0", tabindex = "7", maxlength = "15", name = "updt:bank_a_c" })
+                @Html.LabelFor(purchases => purchases.forex, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Forex", @class = "CustomerDetailMaintenanceEntryPanel_forex" })
+                @Html.TextBox("updt:forex", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.forex, new { id = "updt:forex", @class = "CustomerDetailMaintenanceEntryPanel_forex_txt", title = "XWDVCD", tabindex = "8", maxlength = "3", name = "updt:forex" })
+                @Html.Label("CusGrp", new { id = "updt:CustomerDetailMaintenanceEntryPanel_CusGrp", @class = "CustomerDetailMaintenanceEntryPanel_cusgrp" })
+                @Html.TextBox("updt:cusgrp", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.cusgrp, new { id = "updt_cusgrp", onchange = "this.value=this.value.toUpperCase();loadPopupValue(\"cusgrp\");", @class = "CustomerDetailMaintenanceEntryPanel_cusgrp_txt", title = "XWBNCD", tabindex = "9", style = "width:34px;", maxlength = "2", name = "updt:cusgrp" })
+                <img alt="dropdownImg" src="../Content/themes/base/images/dropdown.jpg" class="dropDownImgCUSGRP" id="dropDownImg_cusgrp" onclick="loadPopup(&quot;dropDownImg_cusgrp&quot;,&quot;customer_groups_popup&quot;,&quot;/CustomerGroup/CusgrpPopup&quot;);" />
+                @Html.TextBox("CUSGRPtxtbox", (string)WorkWithCustomer.Views.WorkWithCustomerEntryPanel.customerGrp.description.TrimEnd(), new { id = "CUSGRPtxtbox", @class = "CustomerDetailMaintenanceEntryPanel_cusgrp_description_txt", type = "text", @readonly = "readonly", title = "XWKHTX", tabindex = "-1", style = "", maxlength = "34", name = "updt:CusGrp_description" })
+                @Html.Label("Rep", new { id = "updt:CustomerDetailMaintenanceEntryPanel_Rep", @class = "CustomerDetailMaintenanceEntryPanel_rep" })
+                @Html.TextBox("updt:rep", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.rep, new { value = ViewBag.rep.ToString().TrimEnd(), id = "updt_rep", onchange = "this.value=this.value.toUpperCase();loadPopupValue(\"rep\");", @class = "CustomerDetailMaintenanceEntryPanel_rep_txt", title = "PERSON", tabindex = "10", style = "width:34px; ", maxlength = "3", name = "updt:rep" })
+                <img alt="dropdownImg" src="../Content/themes/base/images/dropdown.jpg" class="dropDownImgSLMEN" id="dropDownImg_rep" onclick="loadPopup(&quot;dropDownImg_rep&quot;,&quot;salesperson_popup&quot;,&quot;/SalesPerson/SlmenPopup&quot;);" />
+                @Html.TextBox("REPtxtbox", (string)WorkWithCustomer.Views.WorkWithCustomerEntryPanel.salesPersons.full_name.TrimEnd(), new { id = "REPtxtbox", @class = "CustomerDetailMaintenanceEntryPanel_full_name_txt", type = "text", @readonly = "readonly", title = "PNAME", tabindex = "-1", style = "", maxlength = "34", name = "updt:rep_full_name" })
+                @Html.Label("Distributor", new { id = "updt:CustomerDetailMaintenanceEntryPanel_Distributor", @class = "CustomerDetailMaintenanceEntryPanel_distributor" })
+                @Html.TextBox("updt:distributor", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.distributor, new { value = ViewBag.distributor.ToString(), id = "updt_distributor", onchange = "this.value=this.value.toUpperCase();loadPopupValue(\"distributor\");", @class = "CustomerDetailMaintenanceEntryPanel_distributor_txt", type = "text", title = "DSDCDE", tabindex = "11", style = "width:34px; ", maxlength = "2", name = "updt:distributor" })
+                <img alt="dropdownImg" src="../Content/themes/base/images/dropdown.jpg" class="dropDownImgDISTS" id="dropDownImg_dists" onclick="loadPopup(&quot;dropDownImg_dists&quot;,&quot;distributor_popup&quot;,&quot;/Distributor/DistsPopup&quot;);" />
+                @Html.TextBox("DISTRIBUTORtxtbox", (string)WorkWithCustomer.Views.WorkWithCustomerEntryPanel.distributor.description, new { id = "DISTRIBUTORtxtbox", @class = "CustomerDetailMaintenanceEntryPanel_description_txt", type = "text", @readonly = "readonly", title = "DNAME", tabindex = "-1", style = "", maxlength = "34", name = "updt:DISTS_description" })
+                @Html.LabelFor(purchases => purchases.credit_limit, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Credit_Limit", @class = "CustomerDetailMaintenanceEntryPanel_credit_limit" })
+                @Html.TextBox("updt:credit_limit", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.credit_limit, new { id = "updt:xwgiva", @class = "CustomerDetailMaintenanceEntryPanel_credit_limit_txt", title = "XWGIVA", tabindex = "12", style = "; ", maxlength = "17", name = "updt:credit_limit" })
+                @Html.LabelFor(purchases => purchases.balance, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Balance", @class = "CustomerDetailMaintenanceEntryPanel_balance" })
+                @Html.TextBox("updt:balance", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.balance, new { id = "updt:balance", @class = "CustomerDetailMaintenanceEntryPanel_balance_txt", title = "XWIDV0", tabindex = "13", style = "; ", maxlength = "17", name = "updt:balance" })
+                @Html.LabelFor(purchases => purchases.date_loaded, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Date_Loaded", @class = "CustomerDetailMaintenanceEntryPanel_date_loaded" })
+                @Html.TextBox("updt:date_loaded", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.date_loaded, "{0:d}", new { id = "updt:date_loaded", @class = "CustomerDetailMaintenanceEntryPanel_date_loaded_txt datepicker", title = "XWBPD0", tabindex = "14", style = "; ", maxlength = "10", name = "updt:date_loaded" })
+                @Html.LabelFor(purchases => purchases.chg_date, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Chg_Date", @class = "CustomerDetailMaintenanceEntryPanel_chg_date" })
+                @Html.TextBox("updt:chg_date", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.chg_date, "{0:d}", new { id = "updt:chg_date", @class = "CustomerDetailMaintenanceEntryPanel_chg_date_txt datepicker", title = "XWBAD0", tabindex = "15", style = "; ", maxlength = "10", name = "updt:chg_date" })
+                @Html.LabelFor(purchases => purchases.last_sale, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Last_Sale", @class = "CustomerDetailMaintenanceEntryPanel_last_sale" })
+                @Html.TextBox("updt:last_sale", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.last_sale, "{0:d}", new { id = "updt:xwardt", @class = "CustomerDetailMaintenanceEntryPanel_last_sale_txt datepicker", title = "XWARDT", tabindex = "16", style = "; ", maxlength = "10", name = "updt:last_sale" })
+                @Html.LabelFor(purchases => purchases.prospect_no, new { id = "updt:CustomerDetailMaintenanceEntryPanel_Site_no", @class = "CustomerDetailMaintenanceEntryPanel_prospect_no" })
+                @Html.TextBox("updt:prospect_no", WorkWithCustomer.Views.WorkWithCustomerEntryPanel.purchases.prospect_no, new { id = "updt:prospect_no", @class = "CustomerDetailMaintenanceEntryPanel_prospect_no_txt", title = "CUSNO", tabindex = "17", style = "; ", maxlength = "17", name = "updt:prospect_no" })
+            </fieldset>
+        </div>
+        <div id="buttonPanel">
+            <input type="submit" value="Submit" id="Save" name="Save" class="buttons" />
+            <input type="hidden" id="test" class="test" name ="@TempData["redir"].ToString()" />
+        </div>
+		
+    }
+    @using (Ajax.BeginForm("Cancel", "WorkWithCustomer", new AjaxOptions { InsertionMode = InsertionMode.Replace, OnBegin = "gifLoad()", OnComplete = "gifUnload()", UpdateTargetId = "PageContent" }))
+    { 
+        <div id="buttonPanel2">
+            <input type="submit" value="Cancel" id="Cancel" name="Cancel" class="buttons" />
+            <input type="hidden" value="Cancel" />
+        </div>
+    }
+</div>
+<div>
+    <div id="popup" style="width: 100%; height: 100%; top: 0px; position: absolute;
+        margin: 0px; background-color: #000; opacity: 0.1; filter: alpha(opacity=30);
+        z-index: 602; display: none">
+    </div>
+    <div  id="popupdata">
+    </div>
+</div>
+<script type="text/javascript" language="javascript" >
+    /// <summary>
+    ///   Method to apply readonly properties for input fields in display and delete mode.
+    /// </summary>
+    function readonlyFields() {
+        $('input[type="text"],select').attr('readonly', 'readonly');
+        $('input[type="text"],select').addClass(' readonlyinp');
+        $('#dropDownImg_cusgrp').hide();
+        $('#dropDownImg_rep').hide();
+        $('#dropDownImg_dists').hide();
+        $('#updt_cusgrp').attr('style', 'width:56px');
+        $('#updt_rep').attr('style', 'width:56px');
+        $('#updt_distributor').attr('style', 'width:56px');
+    }
+   // $(document).ready(function() {
+     //   if ($("#updt_distributor").val() == "" || $("#updt_distributor").val().trim() == "")
+       //     $("#updt_distributor").val("  ");
+    //});
+</script>

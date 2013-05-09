@@ -1,0 +1,83 @@
+﻿@model IEnumerable<WorkWithCustomer.Models.Distributors>
+@{
+    Layout = null;
+}
+<div style="margin: 0px auto;">
+    <div style="margin: 0px auto; width: 290px; border: 2px solid #D5EBF7; background: #D5EBF7;
+        border-radius: 0px 10px 10px 10px;">
+        <div id="WorkWithCustomersBean" class="clientAreaGrid" style="margin: 0px">
+            <div id="gridContainer" class="XWDFTgridContainer">
+                <table id="updtGrid:grid" class="XWDFTgrid" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            &nbsp;
+                        </th>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            @Html.DisplayNameFor(model => model.code)
+                        </th>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            @Html.DisplayNameFor(model => model.description)
+                        </th>
+                    </tr>
+                    <tr class="XWDFTgridAltData" style="height: 30px;">
+                        <td>
+                            <img alt="Position 2 image" src="../Content/themes/base/images/filter.gif" id="filterGif"
+                                class="filter" onclick="$(&quot;#DISTSForm&quot;).submit();" />
+                        </td>
+                        <td>
+                            @using (Ajax.BeginForm("DistsPopup", "Distributor", new { firstrow = Model.First().code, hasPrevious = ViewBag.HasPrevious }, new AjaxOptions { InsertionMode = InsertionMode.Replace, OnBegin = "gifLoad()", OnComplete = "gifUnload()", UpdateTargetId = "popupdata" }, new { id = "DISTSForm", name = "DISTSForm" }))
+                            {
+                                <input class="WorkWithCustomersEntryPanel_xwbncd" id="filterInput" maxlength="11"
+                                    name="Key" style="text-transform: uppercase; width: 30px;" style="" tabindex="1"
+                                    title="xwbccd" type="text" value="" />
+                            }
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    @{
+                        var gridRow = 1;
+                        foreach (var item in Model)
+                        {
+                            var tempid = item.code.TrimEnd() != "" ? item.code.TrimEnd() : "blank";
+                            var partialid = "updtGridgriddistributor" + tempid.TrimEnd();
+                            var partialid2 = "updtGridgriddescription" + tempid.TrimEnd();
+                            var className = (gridRow % 2) == 0 ? "XWDFTgridAltData" : "XWDFTgridData";
+
+                        <tr class="@className">
+                            <td class="XWDFTrightBottomBorder" width="16"@* align="center"*@>
+                                @Html.CheckBox(tempid.TrimEnd(), new { id = "updtGrid:grid:2:checked", @class = "chkBox", tabindex = "1", onclick = "ChkBoxChecked(this)" })
+                            </td>
+                            <td>
+                                <input id = "@partialid" class = "WorkWithCustomersGrid_dsdcde XWDFTgridField ReadOnly" type = "text" readonly = "readonly" maxlength = "2" name = "updtGrid:grid:0:person" tabindex = "2" value="@item.code.ToString()" style="width: 30px;"/>
+                            </td>
+                            <td>
+                                <input id ="@partialid2" class = "WorkWithCustomersGrid_dname XWDFTgridField ReadOnly" type = "text" readonly = "readonly" maxlength = "40" name = "updtGrid:grid:0:pname" tabindex = "3"  value="@item.description.ToString()"style="width: 120px;" />
+                            </td>
+                        </tr>
+                            gridRow++;
+                        }
+                    }
+                </table>
+                <input type="button" id="DISTributorCancel" value="Cancel" class="buttons" onclick=" POPUPCancel(); " />
+                <input type="button" id="DISTributorSelect" value="Select" class="buttons" onclick=" POPUPSelect(this,  &quot;description &quot; ); " />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="currentPosition" style="display: none;">@ViewBag.CurrentPage.ToString().TrimEnd()</div>
+<div id="position2" style="display: none;">@ViewBag.position2.ToString().TrimEnd()</div>
+<div id="popupPage" style="display: none;">@ViewBag.popupPage.ToString().TrimEnd()</div>
+<div id="popuppager" style="position: absolute; bottom: 2%; right: 2%; padding-left: 0px;
+    padding-right: 0px;">
+    @{ if (ViewBag.HasPrevious)
+       {
+        <img class="popuppagerGif" id="previousGif" onclick=" previousGifclick() " src="../Content/themes/base/images/previous.gif" />
+       } }
+    @{ if (ViewBag.HasMore)
+       {
+        <img class="popuppagerGif" id="nextGif" onclick=" nextGifclick() " src="../Content/themes/base/images/next.gif"
+            style="margin-left: -4px" />
+       } }
+</div>

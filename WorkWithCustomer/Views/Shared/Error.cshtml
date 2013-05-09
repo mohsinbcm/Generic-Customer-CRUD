@@ -1,0 +1,11 @@
+﻿@{
+    Layout = null;
+    if(ViewBag.StatusCode == 4045)
+    {
+        <script type="text/javascript">
+            $(document).ready(function () {
+            alert("@ViewBag.StatusDescription.ToString();");
+            });
+        </script>
+    }
+}

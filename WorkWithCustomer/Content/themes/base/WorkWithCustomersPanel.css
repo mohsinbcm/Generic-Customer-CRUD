@@ -1,0 +1,945 @@
+/*
+ * File Name: WorkWithCustomersPanel.css
+ * Creation Date: 2012-08-08.08:53:02
+ * This file is responsible for flat screen display for function: WorkWithCustomersPanel
+ */
+
+/*
+ * Type: Constant  ::  Name: Databorough Ltd
+ */
+.WorkWithCustomersPanel_Databorough_Ltd
+{
+	position: absolute;
+	top: 90px;
+	left: 0px;
+}
+
+/*
+ * Field:  - zzpgm;
+ */
+.WorkWithCustomersPanel_zzpgm
+{
+	position: absolute;
+	top: 90px;
+	left: 200px;
+	width: 140px;
+	text-align: left;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Field:  - zzdate;
+ */
+.WorkWithCustomersPanel_zzdate
+{
+	position: absolute;
+	top: 120px;
+	left: 200px;
+	width: 80px;
+	text-align: right;
+	padding: 2px 2px 0;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Field:  - actdsp;
+ */
+.WorkWithCustomersPanel_actdsp
+{
+	position: absolute;
+	top: 150px;
+	left: 200px;
+	width: 140px;
+	text-align: left;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Type: Constant  ::  Name: Customer No
+ */
+.WorkWithCustomersPanel_Customer_No
+{
+	position: absolute;
+	top: 180px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwbccd;
+ */
+.WorkWithCustomersPanel_xwbccd
+{
+	position: absolute;
+	top: 180px;
+	left: 200px;
+	width: 88px;
+	text-align: left;
+}
+
+/*
+ * Type: Constant  ::  Name: Customer Name
+ */
+.WorkWithCustomersPanel_Customer_Name
+{
+	position: absolute;
+	top: 210px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwg4tx;
+ */
+.WorkWithCustomersPanel_xwg4tx
+{
+	position: absolute;
+	top: 210px;
+	left: 200px;
+	width: 320px;
+	text-align: left;
+}
+
+/*
+ * Type: Constant  ::  Name: Statement Account
+ */
+.WorkWithCustomersPanel_Statement_Account
+{
+	position: absolute;
+	top: 240px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwb2cd;
+ */
+.WorkWithCustomersPanel_xwb2cd
+{
+	position: absolute;
+	top: 240px;
+	left: 200px;
+	width: 88px;
+	text-align: left;
+}
+
+/*
+ * Type: Constant  ::  Name: Related Account
+ */
+.WorkWithCustomersPanel_Related_Account
+{
+	position: absolute;
+	top: 270px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwb3cd;
+ */
+.WorkWithCustomersPanel_xwb3cd
+{
+	position: absolute;
+	top: 270px;
+	left: 200px;
+	width: 88px;
+	text-align: left;
+}
+
+/*
+ * Type: Constant  ::  Name: Tax Reg
+ */
+.WorkWithCustomersPanel_Tax_Reg
+{
+	position: absolute;
+	top: 300px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwhitx;
+ */
+.WorkWithCustomersPanel_xwhitx
+{
+	position: absolute;
+	top: 300px;
+	left: 200px;
+	width: 120px;
+	text-align: left;
+}
+
+/*
+ * Type: Constant  ::  Name: Bank
+ */
+.WorkWithCustomersPanel_Bank
+{
+	position: absolute;
+	top: 330px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwe0nb;
+ */
+.WorkWithCustomersPanel_xwe0nb
+{
+	position: absolute;
+	top: 330px;
+	left: 200px;
+	width: 72px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Bank A/c
+ */
+.WorkWithCustomersPanel_Bank_A_c
+{
+	position: absolute;
+	top: 360px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwjun0;
+ */
+.WorkWithCustomersPanel_xwjun0
+{
+	position: absolute;
+	top: 360px;
+	left: 200px;
+	width: 120px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Forex
+ */
+.WorkWithCustomersPanel_Forex
+{
+	position: absolute;
+	top: 360px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwdvcd;
+ */
+.WorkWithCustomersPanel_xwdvcd
+{
+	position: absolute;
+	top: 360px;
+	left: 700px;
+	width: 42px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+/*
+ * Type: Constant  ::  Name: CusGrp
+ */
+.WorkWithCustomersPanel_CusGrp
+{
+	position: absolute;
+	top: 390px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwbncd;
+ */
+.WorkWithCustomersPanel_xwbncd
+{
+	position: absolute;
+	top: 390px;
+	left: 200px;
+	width: 28px;
+	text-transform: uppercase;
+}
+/*
+ * Descriptor Image of Field:  - xwbncd
+ */
+.WorkWithCustomersPanel_xwbncd_DESCIMG
+{
+	position: absolute;
+	left: 235px;
+	top: 390px;
+	height: 26px;
+	cursor: pointer;
+	border: 0px;
+	margin: 2px 0 0 -3px;
+	float: left;
+	z-index: 2;
+}
+
+/*
+ * Type: Constant  ::  Name: Rep
+ */
+.WorkWithCustomersPanel_Rep
+{
+	position: absolute;
+	top: 420px;
+	left: 0px;
+}
+
+/*
+ * Field:  - person;
+ */
+.WorkWithCustomersPanel_person
+{
+	position: absolute;
+	top: 420px;
+	left: 200px;
+	width: 42px;
+	text-transform: uppercase;
+}
+/*
+ * Descriptor Image of Field:  - person
+ */
+.WorkWithCustomersPanel_person_DESCIMG
+{
+	position: absolute;
+	left: 249px;
+	top: 420px;
+	height: 26px;
+	cursor: pointer;
+	border: 0px;
+	margin: 2px 0 0 -3px;
+	float: left;
+	z-index: 2;
+}
+
+/*
+ * Field:  - pname;
+ */
+.WorkWithCustomersPanel_SLMEN_pname
+{
+	position: absolute;
+	top: 420px;
+	left: 267px;
+	width: 272px;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Type: Constant  ::  Name: Distributor
+ */
+.WorkWithCustomersPanel_Distributor
+{
+	position: absolute;
+	top: 450px;
+	left: 0px;
+}
+
+/*
+ * Field:  - dsdcde;
+ */
+.WorkWithCustomersPanel_dsdcde
+{
+	position: absolute;
+	top: 450px;
+	left: 200px;
+	width: 28px;
+	text-transform: uppercase;
+}
+/*
+ * Descriptor Image of Field:  - dsdcde
+ */
+.WorkWithCustomersPanel_dsdcde_DESCIMG
+{
+	position: absolute;
+	left: 235px;
+	top: 450px;
+	height: 26px;
+	cursor: pointer;
+	border: 0px;
+	margin: 2px 0 0 -3px;
+	float: left;
+	z-index: 2;
+}
+
+/*
+ * Type: Constant  ::  Name: Terms
+ */
+.WorkWithCustomersPanel_Terms
+{
+	position: absolute;
+	top: 480px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwbtcd;
+ */
+.WorkWithCustomersPanel_xwbtcd
+{
+	position: absolute;
+	top: 480px;
+	left: 700px;
+	width: 42px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+/*
+ * Type: Constant  ::  Name: Credit Limit
+ */
+.WorkWithCustomersPanel_Credit_Limit
+{
+	position: absolute;
+	top: 480px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwgiva;
+ */
+.WorkWithCustomersPanel_xwgiva
+{
+	position: absolute;
+	top: 480px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Stl Dsc
+ */
+.WorkWithCustomersPanel_Stl_Dsc
+{
+	position: absolute;
+	top: 510px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwaocd;
+ */
+.WorkWithCustomersPanel_xwaocd
+{
+	position: absolute;
+	top: 510px;
+	left: 200px;
+	width: 42px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+/*
+ * Type: Constant  ::  Name: Int
+ */
+.WorkWithCustomersPanel_Int
+{
+	position: absolute;
+	top: 510px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwbbcd;
+ */
+.WorkWithCustomersPanel_xwbbcd
+{
+	position: absolute;
+	top: 510px;
+	left: 700px;
+	width: 42px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+/*
+ * Type: Constant  ::  Name: Cr Guarantee
+ */
+.WorkWithCustomersPanel_Cr_Guarantee
+{
+	position: absolute;
+	top: 540px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwg4t0;
+ */
+.WorkWithCustomersPanel_xwg4t0
+{
+	position: absolute;
+	top: 540px;
+	left: 200px;
+	width: 140px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+/*
+ * Type: Constant  ::  Name: B/O
+ */
+.WorkWithCustomersPanel_B_O
+{
+	position: absolute;
+	top: 570px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwc7st;
+ */
+.WorkWithCustomersPanel_xwc7st
+{
+	position: absolute;
+	top: 570px;
+	left: 200px;
+	width: 14px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+/*
+ * Type: Constant  ::  Name: Lang
+ */
+.WorkWithCustomersPanel_Lang
+{
+	position: absolute;
+	top: 570px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwdast;
+ */
+.WorkWithCustomersPanel_xwdast
+{
+	position: absolute;
+	top: 570px;
+	left: 700px;
+	width: 14px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+/*
+ * Type: Constant  ::  Name: Date Loaded
+ */
+.WorkWithCustomersPanel_Date_Loaded
+{
+	position: absolute;
+	top: 600px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwbpd0;
+ */
+.WorkWithCustomersPanel_xwbpd0
+{
+	position: absolute;
+	top: 600px;
+	left: 200px;
+	width: 80px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Chg-Date
+ */
+.WorkWithCustomersPanel_Chg_Date
+{
+	position: absolute;
+	top: 600px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwbad0;
+ */
+.WorkWithCustomersPanel_xwbad0
+{
+	position: absolute;
+	top: 600px;
+	left: 700px;
+	width: 80px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Last Sale
+ */
+.WorkWithCustomersPanel_Last_Sale
+{
+	position: absolute;
+	top: 630px;
+	left: 0px;
+}
+
+/*
+ * Field:  - zwardt;
+ */
+.WorkWithCustomersPanel_zwardt
+{
+	position: absolute;
+	top: 630px;
+	left: 200px;
+	width: 80px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Field:  - xwkhtx;
+ */
+.WorkWithCustomersPanel_CUSGRP_xwkhtx
+{
+	position: absolute;
+	top: 390px;
+	left: 293px;
+	width: 320px;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Field:  - dname;
+ */
+.WorkWithCustomersPanel_DISTS_dname
+{
+	position: absolute;
+	top: 450px;
+	left: 293px;
+	width: 272px;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Type: Constant  ::  Name: Customers
+ */
+.WorkWithCustomersPanel_Customers
+{
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	white-space: pre;
+	margin: 0px 5px 0px 5px;
+}
+
+/*
+ * Type: Constant  ::  Name: Work with Customers
+ */
+.WorkWithCustomersPanel_Work_with_Customers
+{
+	position: absolute;
+	top: 60px;
+	left: 200px;
+	white-space: pre;
+	margin: 0px 5px 0px 5px;
+}
+/*
+ * Style for fieldset
+ */
+.WorkWithCustomersPanel_GroupHeader
+{
+	height: 665px;
+}
+/*
+ * Style for Flat Button Panel
+ */
+
+
+/**
+ * Style Section for extended controls on Edit View 
+ * Added By:- Mohsin Akhtar
+ */
+ 
+.WorkWithCustomersPanel_Amount_last_sale
+{
+position: absolute;
+top: 630px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwf0va
+{
+	position: absolute;
+top: 630px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Date_last_pay
+{
+	position: absolute;
+top: 660px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwasdt
+{
+	position: absolute;
+top: 660px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Last_Pay
+{
+	position: absolute;
+top: 660px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwf0v0
+{
+	position: absolute;
+top: 660px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Date_last_statement
+{
+	position: absolute;
+top: 690px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwbqdt
+{
+	position: absolute;
+top: 690px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Current_pay
+{
+	position: absolute;
+top: 690px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwf1va
+{
+	position: absolute;
+top: 690px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Current_claim
+{
+	position: absolute;
+top: 720px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwf1v0
+{
+	position: absolute;
+top: 720px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Current_sales
+{
+	position: absolute;
+top: 720px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwf2va
+{
+	position: absolute;
+top: 720px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Current_cost
+{
+	position: absolute;
+top: 750px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwf3va
+{
+	position: absolute;
+top: 750px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Ytd_sales
+{
+	position: absolute;
+top: 750px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwf4va
+{
+	position: absolute;
+top: 750px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Last_year_sales
+{
+	position: absolute;
+top: 780px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwf6va
+{
+	position: absolute;
+top: 780px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Balance_Amount
+{
+	position: absolute;
+top: 780px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwidv0
+{
+	position: absolute;
+top: 780px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_Current_Amount
+{
+	position: absolute;
+top: 810px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwgava
+{
+	position: absolute;
+top: 810px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_X30_days
+{
+	position: absolute;
+top: 810px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwgbva
+{
+	position: absolute;
+top: 810px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_X60_days
+{
+	position: absolute;
+top: 840px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwgcva
+{
+	position: absolute;
+top: 840px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_X90_days
+{
+	position: absolute;
+top: 840px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwgdva
+{
+	position: absolute;
+top: 840px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_X20_days
+{
+	position: absolute;
+top: 870px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwgeva
+{
+	position: absolute;
+top: 870px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_X50_days
+{
+	position: absolute;
+top: 870px;
+left: 500px;
+}
+.WorkWithCustomersPanel_xwgfva
+{
+	position: absolute;
+top: 870px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+}
+.WorkWithCustomersPanel_X80_days
+{
+	position: absolute;
+top: 900px;
+left: 0px;
+}
+.WorkWithCustomersPanel_xwggva
+{
+	position: absolute;
+top: 900px;
+left: 200px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+} 
+.WorkWithCustomersPanel_Prospect_no
+{
+	position: absolute;
+top: 900px;
+left: 500px;
+}
+.WorkWithCustomersPanel_cusno
+{
+	position: absolute;
+top: 900px;
+left: 700px;
+width: 80px;
+text-align: right;
+padding: 2px 2px 0px;
+} 
+.messagePanel
+{
+	display:none;
+	position:absolute;
+	top:200px;
+	left:600px;
+	width:400px;
+}

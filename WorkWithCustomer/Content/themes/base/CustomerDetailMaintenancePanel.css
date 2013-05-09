@@ -1,0 +1,572 @@
+/*
+ * File Name: CustomerDetailMaintenancePanel.css
+ * Creation Date: 2012-08-08.08:52:44
+ * This file is responsible for flat screen display for function: CustomerDetailMaintenancePanel
+ */
+
+/*
+ * Type: Constant  ::  Name: Databorough Ltd
+ */
+.CustomerDetailMaintenancePanel_Databorough_Ltd
+{
+	position: absolute;
+	top: 30px;
+	left: 0px;
+}
+
+/*
+ * Field:  - zzpgm;
+ */
+.CustomerDetailMaintenancePanel_zzpgm
+{
+	position: absolute;
+	top: 30px;
+	left: 200px;
+	width: 140px;
+	text-align: left;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Field:  - zzdate;
+ */
+.CustomerDetailMaintenancePanel_zzdate
+{
+	position: absolute;
+	top: 60px;
+	left: 200px;
+	width: 80px;
+	text-align: right;
+	padding: 2px 2px 0;
+	background-color: #F1F1F1;
+}
+
+/*
+ * Type: Constant  ::  Name: Amt Last Sale
+ */
+.CustomerDetailMaintenancePanel_Amt_Last_Sale
+{
+	position: absolute;
+	top: 120px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwf0va;
+ */
+.CustomerDetailMaintenancePanel_xwf0va
+{
+	position: absolute;
+	top: 120px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Date Last Pay
+ */
+.CustomerDetailMaintenancePanel_Date_Last_Pay
+{
+	position: absolute;
+	top: 150px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwasdt;
+ */
+.CustomerDetailMaintenancePanel_xwasdt
+{
+	position: absolute;
+	top: 150px;
+	left: 200px;
+	width: 80px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Last Pay
+ */
+.CustomerDetailMaintenancePanel_Last_Pay
+{
+	position: absolute;
+	top: 180px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwf0v0;
+ */
+.CustomerDetailMaintenancePanel_xwf0v0
+{
+	position: absolute;
+	top: 180px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Date Last Stmt
+ */
+.CustomerDetailMaintenancePanel_Date_Last_Stmt
+{
+	position: absolute;
+	top: 210px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwbqdt;
+ */
+.CustomerDetailMaintenancePanel_xwbqdt
+{
+	position: absolute;
+	top: 210px;
+	left: 200px;
+	width: 80px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Curr Pay
+ */
+.CustomerDetailMaintenancePanel_Curr_Pay
+{
+	position: absolute;
+	top: 240px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwf1va;
+ */
+.CustomerDetailMaintenancePanel_xwf1va
+{
+	position: absolute;
+	top: 240px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Curr Claim
+ */
+.CustomerDetailMaintenancePanel_Curr_Claim
+{
+	position: absolute;
+	top: 270px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwf1v0;
+ */
+.CustomerDetailMaintenancePanel_xwf1v0
+{
+	position: absolute;
+	top: 270px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Curr Sls
+ */
+.CustomerDetailMaintenancePanel_Curr_Sls
+{
+	position: absolute;
+	top: 300px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwf2va;
+ */
+.CustomerDetailMaintenancePanel_xwf2va
+{
+	position: absolute;
+	top: 300px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Curr Cost
+ */
+.CustomerDetailMaintenancePanel_Curr_Cost
+{
+	position: absolute;
+	top: 300px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwf3va;
+ */
+.CustomerDetailMaintenancePanel_xwf3va
+{
+	position: absolute;
+	top: 300px;
+	left: 700px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Ytd Sales
+ */
+.CustomerDetailMaintenancePanel_Ytd_Sales
+{
+	position: absolute;
+	top: 330px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwf4va;
+ */
+.CustomerDetailMaintenancePanel_xwf4va
+{
+	position: absolute;
+	top: 330px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Last Year Sls
+ */
+.CustomerDetailMaintenancePanel_Last_Year_Sls
+{
+	position: absolute;
+	top: 330px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwf6va;
+ */
+.CustomerDetailMaintenancePanel_xwf6va
+{
+	position: absolute;
+	top: 330px;
+	left: 700px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Balance
+ */
+.CustomerDetailMaintenancePanel_Balance
+{
+	position: absolute;
+	top: 360px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwidv0;
+ */
+.CustomerDetailMaintenancePanel_xwidv0
+{
+	position: absolute;
+	top: 360px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Current Amt
+ */
+.CustomerDetailMaintenancePanel_Current_Amt
+{
+	position: absolute;
+	top: 390px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwgava;
+ */
+.CustomerDetailMaintenancePanel_xwgava
+{
+	position: absolute;
+	top: 390px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: 030 Days
+ */
+.CustomerDetailMaintenancePanel_X_030_Days
+{
+	position: absolute;
+	top: 420px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwgbva;
+ */
+.CustomerDetailMaintenancePanel_xwgbva
+{
+	position: absolute;
+	top: 420px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: 060 Days
+ */
+.CustomerDetailMaintenancePanel_X_060_Days
+{
+	position: absolute;
+	top: 420px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwgcva;
+ */
+.CustomerDetailMaintenancePanel_xwgcva
+{
+	position: absolute;
+	top: 420px;
+	left: 700px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: 090 Days
+ */
+.CustomerDetailMaintenancePanel_X_090_Days
+{
+	position: absolute;
+	top: 450px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwgdva;
+ */
+.CustomerDetailMaintenancePanel_xwgdva
+{
+	position: absolute;
+	top: 450px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: 120 Days
+ */
+.CustomerDetailMaintenancePanel_X_120_Days
+{
+	position: absolute;
+	top: 480px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwgeva;
+ */
+.CustomerDetailMaintenancePanel_xwgeva
+{
+	position: absolute;
+	top: 450px;
+	left: 700px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: 150 Days
+ */
+.CustomerDetailMaintenancePanel_X_150_Days
+{
+	position: absolute;
+	top: 480px;
+	left: 0px;
+}
+
+/*
+ * Field:  - xwgfva;
+ */
+.CustomerDetailMaintenancePanel_xwgfva
+{
+	position: absolute;
+	top: 480px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: 180 Days
+ */
+.CustomerDetailMaintenancePanel_X_180_Days
+{
+	position: absolute;
+	top: 450px;
+	left: 500px;
+}
+
+/*
+ * Field:  - xwggva;
+ */
+.CustomerDetailMaintenancePanel_xwggva
+{
+	position: absolute;
+	top: 480px;
+	left: 700px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Total Days
+ */
+.CustomerDetailMaintenancePanel_Total_Days
+{
+	position: absolute;
+	top: 540px;
+	left: 0px;
+}
+
+/*
+ * Field:  - swtota;
+ */
+.CustomerDetailMaintenancePanel_swtota
+{
+	position: absolute;
+	top: 540px;
+	left: 200px;
+	width: 136px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Site no
+ */
+.CustomerDetailMaintenancePanel_Site_no
+{
+	position: absolute;
+	top: 510px;
+	left: 0px;
+}
+
+/*
+ * Field:  - cusno;
+ */
+.CustomerDetailMaintenancePanel_cusno
+{
+	position: absolute;
+	top: 510px;
+	left: 200px;
+	width: 50px;
+	text-align: right;
+	padding: 2px 2px 0;
+}
+
+/*
+ * Type: Constant  ::  Name: Customers
+ */
+.CustomerDetailMaintenancePanel_Customers
+{
+	position: absolute;
+	top: 00px;
+	left: 0px;
+	white-space: pre;
+	margin: 0px 5px 0px 5px;
+}
+
+/*
+ * Type: Constant  ::  Name: Customer Detail Maintenance
+ */
+.CustomerDetailMaintenancePanel_Customer_Detail_Maintenance
+{
+	position: absolute;
+	top: 00px;
+	left: 200px;
+	white-space: pre;
+	margin: 0px 5px 0px 5px;
+}
+/*
+ * Style for fieldset
+ */
+.CustomerDetailMaintenancePanel_GroupHeader
+{
+	height: 545px;
+	position:relative;
+}
+/*
+ * Style for Flat Button Panel
+ */
+#buttonPanel
+{
+	font-weight:bold;
+	width: auto;
+	margin-left: 300px;
+	*margin-left: 150px;
+	margin-left: 150px/9;
+}
+
+#buttonPanel
+{
+	font-weight:bold;
+	width: auto;
+	margin-left: 375px;
+	*margin-left: 150px;
+	margin-left: 150px/9;
+}
+
+
+#buttonPanel2
+{
+	position:relative;
+	bottom:35px;
+	left:300px;
+}
+
+#form1
+{
+	position:absolute;
+}
+
+#CustomerDetailMaintenancePanel.clientArea
+{
+	
+}

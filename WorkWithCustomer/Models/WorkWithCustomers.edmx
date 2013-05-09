@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WorkWithCustomerModel.Store" Alias="Self" Provider="IBM.Data.DB2" ProviderManifestToken="AS, 07.01.0000, 4708572, 0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="WorkWithCustomerModelStoreContainer">
+          <EntitySet Name="CUSF" EntityType="WorkWithCustomerModel.Store.CUSF" store:Type="Tables" store:Schema="XAN4CDJ" store:Name="CUSF">
+            <DefiningQuery>SELECT 
+      CUSF.CNAME AS CNAME, 
+      CUSF.DSDCDE AS DSDCDE, 
+      CUSF.STATUS AS STATUS, 
+      CUSF.TELNO AS TELNO, 
+      CUSF.EXTN AS EXTN, 
+      CUSF.LCTDAT AS LCTDAT, 
+      CUSF.APDATE AS APDATE, 
+      CUSF.USERNM AS USERNM, 
+      CUSF.SALUT AS SALUT, 
+      CUSF.JTITLE AS JTITLE, 
+      CUSF.FAXNO AS FAXNO, 
+      CUSF.EMAIL AS EMAIL, 
+      CUSF.WEBSIT AS WEBSIT, 
+      CUSF.ADD1 AS ADD1, 
+      CUSF.ADD2 AS ADD2, 
+      CUSF.ADD3 AS ADD3, 
+      CUSF.ADD4 AS ADD4, 
+      CUSF.CNTRY AS CNTRY, 
+      CUSF.PSCD AS PSCD, 
+      CUSF.CUSNO AS CUSNO, 
+      CUSF.CMMNT1 AS CMMNT1, 
+      CUSF.CMMNT2 AS CMMNT2, 
+      CUSF.CMMNT3 AS CMMNT3, 
+      CUSF.DOCRCD AS DOCRCD, 
+      CUSF.DOC2 AS DOC2, 
+      CUSF.DOC3 AS DOC3, 
+      CUSF.DOC4 AS DOC4, 
+      CUSF.DOC5 AS DOC5, 
+      CUSF.DOC6 AS DOC6, 
+      CUSF.OLDMCH AS OLDMCH, 
+      CUSF.PRPCDE AS PRPCDE, 
+      CUSF.LSLCDE AS LSLCDE, 
+      CUSF.PREFIX AS PREFIX, 
+      CUSF.LLETSQ AS LLETSQ, 
+      CUSF.SPREQ AS SPREQ, 
+      CUSF.RISC AS RISC, 
+      CUSF.ALTTEL AS ALTTEL, 
+      CUSF.ALTTL2 AS ALTTL2, 
+      CUSF.SINIT AS SINIT, 
+      CUSF.VERYFD AS VERYFD, 
+      CUSF.VINIT AS VINIT, 
+      CUSF.VFDATE AS VFDATE, 
+      CUSF.CRTNAM AS CRTNAM, 
+      CUSF.CRTDAT AS CRTDAT, 
+      CUSF.UPDNAM AS UPDNAM, 
+      CUSF.UPDDAT AS UPDDAT, 
+      CUSF.ORG AS ORG
+      FROM XAN4CDJ.CUSF AS CUSF</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CUSGRP" EntityType="WorkWithCustomerModel.Store.CUSGRP" store:Type="Tables" store:Schema="XAN4CDJ" store:Name="CUSGRP">
+            <DefiningQuery>SELECT 
+      CUSGRP.XWBNCD AS XWBNCD, 
+      CUSGRP.XWKHTX AS XWKHTX
+      FROM XAN4CDJ.CUSGRP AS CUSGRP</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CUSTS" EntityType="WorkWithCustomerModel.Store.CUSTS" store:Type="Tables" Schema="XAN4CDJ">
+          <!-- <DefiningQuery>SELECT 
+      CUSTS.XWBCCD AS XWBCCD, 
+      CUSTS.XWG4TX AS XWG4TX, 
+      CUSTS.XWB2CD AS XWB2CD, 
+      CUSTS.XWB3CD AS XWB3CD, 
+      CUSTS.XWHITX AS XWHITX, 
+      CUSTS.XWE0NB AS XWE0NB, 
+      CUSTS.XWJUN0 AS XWJUN0, 
+      CUSTS.XWDVCD AS XWDVCD, 
+      CUSTS.XWBNCD AS XWBNCD, 
+      CUSTS.PERSON AS PERSON, 
+      CUSTS.DSDCDE AS DSDCDE, 
+      CUSTS.XWBTCD AS XWBTCD, 
+      CUSTS.XWGIVA AS XWGIVA, 
+      CUSTS.XWAOCD AS XWAOCD, 
+      CUSTS.XWBBCD AS XWBBCD, 
+      CUSTS.XWG4T0 AS XWG4T0, 
+      CUSTS.XWC7ST AS XWC7ST, 
+      CUSTS.XWDAST AS XWDAST, 
+      CUSTS.XWBPD0 AS XWBPD0, 
+      CUSTS.XWBAD0 AS XWBAD0, 
+      CUSTS.XWARDT AS XWARDT, 
+      CUSTS.XWF0VA AS XWF0VA, 
+      CUSTS.XWASDT AS XWASDT, 
+      CUSTS.XWF0V0 AS XWF0V0, 
+      CUSTS.XWBQDT AS XWBQDT, 
+      CUSTS.XWF1VA AS XWF1VA, 
+      CUSTS.XWF1V0 AS XWF1V0, 
+      CUSTS.XWF2VA AS XWF2VA, 
+      CUSTS.XWF3VA AS XWF3VA, 
+      CUSTS.XWF4VA AS XWF4VA, 
+      CUSTS.XWF6VA AS XWF6VA, 
+      CUSTS.XWIDV0 AS XWIDV0, 
+      CUSTS.XWGAVA AS XWGAVA, 
+      CUSTS.XWGBVA AS XWGBVA, 
+      CUSTS.XWGCVA AS XWGCVA, 
+      CUSTS.XWGDVA AS XWGDVA, 
+      CUSTS.XWGEVA AS XWGEVA, 
+      CUSTS.XWGFVA AS XWGFVA, 
+      CUSTS.XWGGVA AS XWGGVA, 
+      CUSTS.CUSNO AS CUSNO
+      FROM XAN4CDJ.CUSTS AS CUSTS</DefiningQuery>-->
+          </EntitySet>
+          <EntitySet Name="DISTS" EntityType="WorkWithCustomerModel.Store.DISTS" store:Type="Tables" store:Schema="XAN4CDJ" store:Name="DISTS">
+            <DefiningQuery>SELECT 
+      DISTS.DSDCDE AS DSDCDE, 
+      DISTS.DNAME AS DNAME
+      FROM XAN4CDJ.DISTS AS DISTS</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SLMEN" EntityType="WorkWithCustomerModel.Store.SLMEN" store:Type="Tables" store:Schema="XAN4CDJ" store:Name="SLMEN">
+            <DefiningQuery>SELECT 
+      SLMEN.PERSON AS PERSON, 
+      SLMEN.PNAME AS PNAME
+      FROM XAN4CDJ.SLMEN AS SLMEN</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'S108B00R.XAN4CDJ.CUSF' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CUSF">
+          <Key>
+            <PropertyRef Name="CUSNO" />
+          </Key>
+          <Property Name="CNAME" Type="char" Nullable="false" MaxLength="34" />
+          <Property Name="DSDCDE" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="STATUS" Type="char" Nullable="false" />
+          <Property Name="TELNO" Type="char" Nullable="false" MaxLength="17" />
+          <Property Name="EXTN" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="LCTDAT" Type="numeric" Nullable="false" Precision="6" />
+          <Property Name="APDATE" Type="numeric" Nullable="false" Precision="6" />
+          <Property Name="USERNM" Type="char" Nullable="false" MaxLength="34" />
+          <Property Name="SALUT" Type="char" Nullable="false" MaxLength="34" />
+          <Property Name="JTITLE" Type="char" Nullable="false" MaxLength="34" />
+          <Property Name="FAXNO" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="EMAIL" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="WEBSIT" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ADD1" Type="char" Nullable="false" MaxLength="34" />
+          <Property Name="ADD2" Type="char" Nullable="false" MaxLength="34" />
+          <Property Name="ADD3" Type="char" Nullable="false" MaxLength="34" />
+          <Property Name="ADD4" Type="char" Nullable="false" MaxLength="34" />
+          <Property Name="CNTRY" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="PSCD" Type="char" Nullable="false" MaxLength="8" />
+          <Property Name="CUSNO" Type="decimal" Nullable="false" />
+          <Property Name="CMMNT1" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="CMMNT2" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="CMMNT3" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="DOCRCD" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="DOC2" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="DOC3" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="DOC4" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="DOC5" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="DOC6" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="OLDMCH" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="PRPCDE" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="LSLCDE" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="PREFIX" Type="char" Nullable="false" MaxLength="5" />
+          <Property Name="LLETSQ" Type="decimal" Nullable="false" Precision="3" />
+          <Property Name="SPREQ" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="RISC" Type="char" Nullable="false" />
+          <Property Name="ALTTEL" Type="char" Nullable="false" MaxLength="17" />
+          <Property Name="ALTTL2" Type="char" Nullable="false" MaxLength="17" />
+          <Property Name="SINIT" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="VERYFD" Type="char" Nullable="false" />
+          <Property Name="VINIT" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="VFDATE" Type="numeric" Nullable="false" Precision="6" />
+          <Property Name="CRTNAM" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="CRTDAT" Type="numeric" Nullable="false" Precision="6" />
+          <Property Name="UPDNAM" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="UPDDAT" Type="numeric" Nullable="false" Precision="6" />
+          <Property Name="ORG" Type="decimal" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'S108B00R.XAN4CDJ.CUSGRP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CUSGRP">
+          <Key>
+            <PropertyRef Name="XWBNCD" />
+          </Key>
+          <Property Name="XWBNCD" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="XWKHTX" Type="char" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'S108B00R.XAN4CDJ.CUSTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CUSTS">
+          <Key>
+            <PropertyRef Name="XWBCCD" />
+          </Key>
+          <Property Name="XWBCCD" Type="char" Nullable="false" MaxLength="11" />
+          <Property Name="XWG4TX" Type="char" Nullable="true" MaxLength="40" />
+          <Property Name="XWB2CD" Type="char" Nullable="true" MaxLength="11" />
+          <Property Name="XWB3CD" Type="char" Nullable="true" MaxLength="11" />
+          <Property Name="XWHITX" Type="char" Nullable="true" MaxLength="15" />
+          <Property Name="XWE0NB" Type="decimal" Nullable="true" Precision="9" />
+          <Property Name="XWJUN0" Type="decimal" Nullable="true" Precision="15" />
+          <Property Name="XWDVCD" Type="char" Nullable="true" MaxLength="3" />
+          <Property Name="XWBNCD" Type="char" Nullable="true" MaxLength="2" />
+          <Property Name="PERSON" Type="char" Nullable="true" MaxLength="3" />
+          <Property Name="DSDCDE" Type="char" Nullable="true" MaxLength="2" />
+          <Property Name="XWBTCD" Type="char" Nullable="true" MaxLength="3" />
+          <Property Name="XWGIVA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWAOCD" Type="char" Nullable="true" MaxLength="3" />
+          <Property Name="XWBBCD" Type="char" Nullable="true" MaxLength="3" />
+          <Property Name="XWG4T0" Type="char" Nullable="true" MaxLength="10" />
+          <Property Name="XWC7ST" Type="char" Nullable="true" />
+          <Property Name="XWDAST" Type="char" Nullable="true" />
+          <Property Name="XWBPD0" Type="date" Nullable="true" />
+          <Property Name="XWBAD0" Type="date" Nullable="true" />
+          <Property Name="XWARDT" Type="date" Nullable="true" />
+          <Property Name="XWF0VA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWASDT" Type="date" Nullable="true" />
+          <Property Name="XWF0V0" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWBQDT" Type="date" Nullable="true" />
+          <Property Name="XWF1VA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWF1V0" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWF2VA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWF3VA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWF4VA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWF6VA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWIDV0" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWGAVA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWGBVA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWGCVA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWGDVA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWGEVA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWGFVA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="XWGGVA" Type="decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="CUSNO" Type="decimal" Nullable="true" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'S108B00R.XAN4CDJ.DISTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DISTS">
+          <Key>
+            <PropertyRef Name="DSDCDE" />
+          </Key>
+          <Property Name="DSDCDE" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="DNAME" Type="char" Nullable="false" MaxLength="34" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'S108B00R.XAN4CDJ.SLMEN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SLMEN">
+          <Key>
+            <PropertyRef Name="PERSON" />
+          </Key>
+          <Property Name="PERSON" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="PNAME" Type="char" Nullable="false" MaxLength="34" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WorkWithCustomerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="WorkWithCustomerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CUSF" EntityType="WorkWithCustomerModel.CUSF" />
+          <EntitySet Name="CUSGRP" EntityType="WorkWithCustomerModel.CustomerGroups" />
+          <EntitySet Name="Purchases" EntityType="WorkWithCustomerModel.Purchases" />
+          <EntitySet Name="Distributors" EntityType="WorkWithCustomerModel.Distributors" />
+          <EntitySet Name="Salespersons" EntityType="WorkWithCustomerModel.Salespersons" />
+        </EntityContainer>
+        <EntityType Name="CUSF">
+          <Key>
+            <PropertyRef Name="CUSNO" />
+          </Key>
+          <Property Name="CNAME" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+          <Property Name="DSDCDE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="STATUS" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="TELNO" Type="String" Nullable="false" MaxLength="17" Unicode="false" FixedLength="true" />
+          <Property Name="EXTN" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="LCTDAT" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="APDATE" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="USERNM" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+          <Property Name="SALUT" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+          <Property Name="JTITLE" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+          <Property Name="FAXNO" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="WEBSIT" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ADD1" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+          <Property Name="ADD2" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+          <Property Name="ADD3" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+          <Property Name="ADD4" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+          <Property Name="CNTRY" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="PSCD" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="CUSNO" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="CMMNT1" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="CMMNT2" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="CMMNT3" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="DOCRCD" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="DOC2" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="DOC3" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="DOC4" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="DOC5" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="DOC6" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="OLDMCH" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="PRPCDE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="LSLCDE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="PREFIX" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="LLETSQ" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="SPREQ" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="RISC" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="ALTTEL" Type="String" Nullable="false" MaxLength="17" Unicode="false" FixedLength="true" />
+          <Property Name="ALTTL2" Type="String" Nullable="false" MaxLength="17" Unicode="false" FixedLength="true" />
+          <Property Name="SINIT" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="VERYFD" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="VINIT" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="VFDATE" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="CRTNAM" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="CRTDAT" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="UPDNAM" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="UPDDAT" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="ORG" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+        </EntityType>
+        <EntityType Name="CustomerGroups">
+          <Key>
+            <PropertyRef Name="cusgrp" />
+          </Key>
+          <Property Name="cusgrp" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Purchases">
+          <Key>
+            <PropertyRef Name="customer" />
+          </Key>
+          <Property Name="customer" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="name" Type="String" Nullable="true" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="statement_account" Type="String" Nullable="true" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="related_account" Type="String" Nullable="true" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="tax_reg" Type="String" Nullable="true" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="bank" Type="Decimal" Nullable="true" Precision="9" Scale="0" />
+          <Property Name="bank_a_c" Type="Decimal" Nullable="true" Precision="15" Scale="0" />
+          <Property Name="forex" Type="String" Nullable="true" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="cusgrp" Type="String" Nullable="true" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="rep" Type="String" Nullable="true" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="distributor" Type="String" Nullable="true" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="terms" Type="String" Nullable="true" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="credit_limit" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="stl_dsc" Type="String" Nullable="true" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="int_x" Type="String" Nullable="true" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="cr_guarantee" Type="String" Nullable="true" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="b_o" Type="String" Nullable="true" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="lang" Type="String" Nullable="true" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="date_loaded" Type="DateTime" Nullable="true" />
+          <Property Name="chg_date" Type="DateTime" Nullable="true" />
+          <Property Name="last_sale" Type="DateTime" Nullable="true" />
+          <Property Name="amt_last_sale" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="date_last_pay" Type="DateTime" Nullable="true" />
+          <Property Name="last_pay" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="date_last_stmt" Type="DateTime" Nullable="true" />
+          <Property Name="curr_pay" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="curr_claim" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="curr_sls" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="curr_cost" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="ytd_sales" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="last_year_sls" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="balance" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="current_amt" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="x030_days" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="x060_days" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="x090_days" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="x120_days" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="x150_days" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="x180_days" Type="Decimal" Nullable="true" Precision="15" Scale="2" />
+          <Property Name="prospect_no" Type="Decimal" Nullable="true" Precision="5" Scale="0" />
+        </EntityType>
+        <EntityType Name="Distributors">
+          <Key>
+            <PropertyRef Name="code" />
+          </Key>
+          <Property Name="code" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Salespersons">
+          <Key>
+            <PropertyRef Name="person" />
+          </Key>
+          <Property Name="person" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="full_name" Type="String" Nullable="false" MaxLength="34" Unicode="false" FixedLength="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WorkWithCustomerModelStoreContainer" CdmEntityContainer="WorkWithCustomerEntities">
+          <EntitySetMapping Name="CUSF"><EntityTypeMapping TypeName="WorkWithCustomerModel.CUSF"><MappingFragment StoreEntitySet="CUSF">
+            <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+            <ScalarProperty Name="DSDCDE" ColumnName="DSDCDE" />
+            <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+            <ScalarProperty Name="TELNO" ColumnName="TELNO" />
+            <ScalarProperty Name="EXTN" ColumnName="EXTN" />
+            <ScalarProperty Name="LCTDAT" ColumnName="LCTDAT" />
+            <ScalarProperty Name="APDATE" ColumnName="APDATE" />
+            <ScalarProperty Name="USERNM" ColumnName="USERNM" />
+            <ScalarProperty Name="SALUT" ColumnName="SALUT" />
+            <ScalarProperty Name="JTITLE" ColumnName="JTITLE" />
+            <ScalarProperty Name="FAXNO" ColumnName="FAXNO" />
+            <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+            <ScalarProperty Name="WEBSIT" ColumnName="WEBSIT" />
+            <ScalarProperty Name="ADD1" ColumnName="ADD1" />
+            <ScalarProperty Name="ADD2" ColumnName="ADD2" />
+            <ScalarProperty Name="ADD3" ColumnName="ADD3" />
+            <ScalarProperty Name="ADD4" ColumnName="ADD4" />
+            <ScalarProperty Name="CNTRY" ColumnName="CNTRY" />
+            <ScalarProperty Name="PSCD" ColumnName="PSCD" />
+            <ScalarProperty Name="CUSNO" ColumnName="CUSNO" />
+            <ScalarProperty Name="CMMNT1" ColumnName="CMMNT1" />
+            <ScalarProperty Name="CMMNT2" ColumnName="CMMNT2" />
+            <ScalarProperty Name="CMMNT3" ColumnName="CMMNT3" />
+            <ScalarProperty Name="DOCRCD" ColumnName="DOCRCD" />
+            <ScalarProperty Name="DOC2" ColumnName="DOC2" />
+            <ScalarProperty Name="DOC3" ColumnName="DOC3" />
+            <ScalarProperty Name="DOC4" ColumnName="DOC4" />
+            <ScalarProperty Name="DOC5" ColumnName="DOC5" />
+            <ScalarProperty Name="DOC6" ColumnName="DOC6" />
+            <ScalarProperty Name="OLDMCH" ColumnName="OLDMCH" />
+            <ScalarProperty Name="PRPCDE" ColumnName="PRPCDE" />
+            <ScalarProperty Name="LSLCDE" ColumnName="LSLCDE" />
+            <ScalarProperty Name="PREFIX" ColumnName="PREFIX" />
+            <ScalarProperty Name="LLETSQ" ColumnName="LLETSQ" />
+            <ScalarProperty Name="SPREQ" ColumnName="SPREQ" />
+            <ScalarProperty Name="RISC" ColumnName="RISC" />
+            <ScalarProperty Name="ALTTEL" ColumnName="ALTTEL" />
+            <ScalarProperty Name="ALTTL2" ColumnName="ALTTL2" />
+            <ScalarProperty Name="SINIT" ColumnName="SINIT" />
+            <ScalarProperty Name="VERYFD" ColumnName="VERYFD" />
+            <ScalarProperty Name="VINIT" ColumnName="VINIT" />
+            <ScalarProperty Name="VFDATE" ColumnName="VFDATE" />
+            <ScalarProperty Name="CRTNAM" ColumnName="CRTNAM" />
+            <ScalarProperty Name="CRTDAT" ColumnName="CRTDAT" />
+            <ScalarProperty Name="UPDNAM" ColumnName="UPDNAM" />
+            <ScalarProperty Name="UPDDAT" ColumnName="UPDDAT" />
+            <ScalarProperty Name="ORG" ColumnName="ORG" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CUSGRP"><EntityTypeMapping TypeName="WorkWithCustomerModel.CustomerGroups"><MappingFragment StoreEntitySet="CUSGRP">
+            <ScalarProperty Name="cusgrp" ColumnName="XWBNCD" />
+            <ScalarProperty Name="description" ColumnName="XWKHTX" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Purchases"><EntityTypeMapping TypeName="WorkWithCustomerModel.Purchases"><MappingFragment StoreEntitySet="CUSTS">
+            <ScalarProperty Name="customer" ColumnName="XWBCCD" />
+            <ScalarProperty Name="name" ColumnName="XWG4TX" />
+            <ScalarProperty Name="statement_account" ColumnName="XWB2CD" />
+            <ScalarProperty Name="related_account" ColumnName="XWB3CD" />
+            <ScalarProperty Name="tax_reg" ColumnName="XWHITX" />
+            <ScalarProperty Name="bank" ColumnName="XWE0NB" />
+            <ScalarProperty Name="bank_a_c" ColumnName="XWJUN0" />
+            <ScalarProperty Name="forex" ColumnName="XWDVCD" />
+            <ScalarProperty Name="cusgrp" ColumnName="XWBNCD" />
+            <ScalarProperty Name="rep" ColumnName="PERSON" />
+            <ScalarProperty Name="distributor" ColumnName="DSDCDE" />
+            <ScalarProperty Name="terms" ColumnName="XWBTCD" />
+            <ScalarProperty Name="credit_limit" ColumnName="XWGIVA" />
+            <ScalarProperty Name="stl_dsc" ColumnName="XWAOCD" />
+            <ScalarProperty Name="int_x" ColumnName="XWBBCD" />
+            <ScalarProperty Name="cr_guarantee" ColumnName="XWG4T0" />
+            <ScalarProperty Name="b_o" ColumnName="XWC7ST" />
+            <ScalarProperty Name="lang" ColumnName="XWDAST" />
+            <ScalarProperty Name="date_loaded" ColumnName="XWBPD0" />
+            <ScalarProperty Name="chg_date" ColumnName="XWBAD0" />
+            <ScalarProperty Name="last_sale" ColumnName="XWARDT" />
+            <ScalarProperty Name="amt_last_sale" ColumnName="XWF0VA" />
+            <ScalarProperty Name="date_last_pay" ColumnName="XWASDT" />
+            <ScalarProperty Name="last_pay" ColumnName="XWF0V0" />
+            <ScalarProperty Name="date_last_stmt" ColumnName="XWBQDT" />
+            <ScalarProperty Name="curr_pay" ColumnName="XWF1VA" />
+            <ScalarProperty Name="curr_claim" ColumnName="XWF1V0" />
+            <ScalarProperty Name="curr_sls" ColumnName="XWF2VA" />
+            <ScalarProperty Name="curr_cost" ColumnName="XWF3VA" />
+            <ScalarProperty Name="ytd_sales" ColumnName="XWF4VA" />
+            <ScalarProperty Name="last_year_sls" ColumnName="XWF6VA" />
+            <ScalarProperty Name="balance" ColumnName="XWIDV0" />
+            <ScalarProperty Name="current_amt" ColumnName="XWGAVA" />
+            <ScalarProperty Name="x030_days" ColumnName="XWGBVA" />
+            <ScalarProperty Name="x060_days" ColumnName="XWGCVA" />
+            <ScalarProperty Name="x090_days" ColumnName="XWGDVA" />
+            <ScalarProperty Name="x120_days" ColumnName="XWGEVA" />
+            <ScalarProperty Name="x150_days" ColumnName="XWGFVA" />
+            <ScalarProperty Name="x180_days" ColumnName="XWGGVA" />
+            <ScalarProperty Name="prospect_no" ColumnName="CUSNO" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Distributors"><EntityTypeMapping TypeName="WorkWithCustomerModel.Distributors"><MappingFragment StoreEntitySet="DISTS">
+            <ScalarProperty Name="code" ColumnName="DSDCDE" />
+            <ScalarProperty Name="description" ColumnName="DNAME" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Salespersons"><EntityTypeMapping TypeName="WorkWithCustomerModel.Salespersons"><MappingFragment StoreEntitySet="SLMEN">
+            <ScalarProperty Name="person" ColumnName="PERSON" />
+            <ScalarProperty Name="full_name" ColumnName="PNAME" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="WorkWithCustomers" ZoomLevel="125">
+        <EntityTypeShape EntityType="WorkWithCustomerModel.CUSF" Width="1.5" PointX="0.75" PointY="0.75" Height="8.6592415364583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkWithCustomerModel.CustomerGroups" Width="1.5" PointX="2.75" PointY="0.75" Height="1.2636116536458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkWithCustomerModel.Purchases" Width="1.5" PointX="2.75" PointY="3.75" Height="7.5088102213541656" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkWithCustomerModel.Distributors" Width="1.5" PointX="4.75" PointY="0.75" Height="1.2636116536458317" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkWithCustomerModel.Salespersons" Width="1.5" PointX="4.75" PointY="3.75" Height="1.2636116536458317" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

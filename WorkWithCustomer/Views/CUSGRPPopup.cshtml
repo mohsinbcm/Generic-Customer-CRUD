@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WorkWithCustomer.Models.CustomerGroups>
+@{
+    Layout = "";
+}
+<div style="margin: 0px auto;">
+    <div style="margin: 0px auto; width: 290px; border: 2px solid #D5EBF7; background: #D5EBF7; border-radius: 0px 10px 10px 10px;">
+        <div id="WorkWithCustomersBean" class="clientAreaGrid" style="margin: 0px">
+            <div id="gridContainer" class="XWDFTgridContainer">
+                <table id="updtGrid:grid" class="XWDFTgrid" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            &nbsp;
+                        </th>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            @Html.DisplayNameFor(model => model.cusgrp)
+                        </th>
+                        <th class="gridTableHeader gridTableHeader-Text" scope="col">
+                            @Html.DisplayNameFor(model => model.description)
+                        </th>
+                    </tr>
+                    <tr class="XWDFTgridAltData" style="height: 30px;">
+                        <td>
+                            <img src="../Content/themes/base/images/filter.gif" id="filterGif" class="filter"
+                                onclick="$(&quot;#CusGrpForm&quot;).submit();" />
+                        </td>
+                        <td>
+                        @using (Ajax.BeginForm("CusgrpPopup", "CustomerGroup",new {firstrow = Model.First().cusgrp, hasPrevious = ViewBag.HasPrevious}, new AjaxOptions { InsertionMode = InsertionMode.Replace, OnBegin = "gifLoad()", OnComplete = "gifUnload()", UpdateTargetId = "popupdata" }, new { id = "CusGrpForm", name = "CusGrpForm" }))
+                        {
+                            <input id="filterInput" class="WorkWithCustomersEntryPanel_xwbncd" type="text" title="xwbccd"
+                                style="text-transform: uppercase; width: 30px;" tabindex="1" maxlength="11" value=""
+                                name="Key"/>
+                        }
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    @{
+                        int gridRow = 1;
+                        foreach (var item in Model)
+                        {
+                            string partialid = "updtGridgridcusgrp" + item.cusgrp.TrimEnd();
+                            string partialid2 = "updtGridgriddescription" + item.cusgrp.TrimEnd();
+                            string className = (gridRow % 2) == 0 ? "XWDFTgridAltData" : "XWDFTgridData";
+                            <tr class="@className">
+                            <td @*align="center"*@ class="XWDFTrightBottomBorder" width="16">
+                                @Html.CheckBox(item.cusgrp.TrimEnd(), new { id = "updtGrid:grid:2:checked", @class = "chkBox", tabindex = "1", onclick = "ChkBoxChecked(this)" })
+                            </td>
+                            <td>
+                                <input id = "@partialid" class = "WorkWithCustomersGrid_xwbncd XWDFTgridField ReadOnly" type = "text" readonly = "readonly" maxlength = "2" name = "updtGrid:grid:0:xwbncd" tabindex = "2" value="@item.cusgrp.ToString()" style="width: 30px;"/>
+                            </td>
+                            <td>
+                                <input class = "WorkWithCustomersGrid_xwkhtx XWDFTgridField ReadOnly" id ="@partialid2" maxlength = "40" name = "updtGrid:grid:0:xwkhtx" readonly = "readonly" style="width: 80px;" tabindex = "3" type = "text" value="@item.description.ToString()" />
+                            </td>
+                        </tr>
+                            gridRow++;
+                        }
+                    }
+                </table>
+                <input type="button" id="CusGrpCancel" value="Cancel" class="buttons" onclick="POPUPCancel();" />
+                <input class="buttons" id="CusGrpSelect" onclick="POPUPSelect(this , &quot;description&quot;) ; " type="button" value="Select" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="currentPosition" style="display:none;">@ViewBag.CurrentPage.ToString().TrimEnd()</div>
+<div id="position2" style="display:none;">@ViewBag.position2.ToString().TrimEnd()</div>
+<div id ="popupPage" style="display:none;">@ViewBag.popupPage.ToString().TrimEnd()</div>
+<div id="popuppager" style="position:absolute; bottom:2%; right: 2%;padding-left:0px;padding-right:0px;">
+@{ if (ViewBag.HasPrevious)
+   {
+        <img class="popuppagerGif" id="previousGif" onclick="previousGifclick() " src="../Content/themes/base/images/previous.gif" />
+   }
+}
+@{ if (ViewBag.HasMore)
+   {
+    <img class="popuppagerGif" id="nextGif" onclick="nextGifclick() " src="../Content/themes/base/images/next.gif" style="margin-left:-4px" />
+   }
+} 
+</div>
